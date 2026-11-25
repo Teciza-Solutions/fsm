@@ -1,0 +1,92 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2025-11-08 16:09:52.464972",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "label",
+  "value_fieldtype",
+  "is_group",
+  "rotate",
+  "make_read_only",
+  "ignore_print",
+  "print_format_width",
+  "options",
+  "parent_node"
+ ],
+ "fields": [
+  {
+   "fieldname": "label",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Label",
+   "reqd": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "is_group",
+   "fieldtype": "Check",
+   "in_list_view": 1,
+   "label": "Is Group"
+  },
+  {
+   "fieldname": "value_fieldtype",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Value Fieldtype"
+  },
+  {
+   "default": "0",
+   "fieldname": "rotate",
+   "fieldtype": "Check",
+   "in_list_view": 1,
+   "label": "Rotate"
+  },
+  {
+   "default": "0",
+   "fieldname": "make_read_only",
+   "fieldtype": "Check",
+   "in_list_view": 1,
+   "label": "Make Read Only"
+  },
+  {
+   "default": "0",
+   "fieldname": "ignore_print",
+   "fieldtype": "Check",
+   "label": "Ignore Print"
+  },
+  {
+   "fieldname": "print_format_width",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Print Format Width"
+  },
+  {
+   "fieldname": "options",
+   "fieldtype": "Data",
+   "label": "Options"
+  },
+  {
+   "description": "If this is a child of Parent Link Field, like Category - Sub Category, so add the Parent Category Column Name",
+   "fieldname": "parent_node",
+   "fieldtype": "Data",
+   "label": "Parent Node"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2025-12-08 13:38:59.134769",
+ "modified_by": "Administrator",
+ "module": "FSM",
+ "name": "Checklist Template Column",
+ "owner": "Administrator",
+ "permissions": [],
+ "row_format": "Dynamic",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

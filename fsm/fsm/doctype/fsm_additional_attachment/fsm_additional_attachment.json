@@ -1,0 +1,44 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2025-12-25 12:29:29.545887",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "attach",
+  "preview"
+ ],
+ "fields": [
+  {
+   "columns": 8,
+   "fieldname": "attach",
+   "fieldtype": "Attach",
+   "in_list_view": 1,
+   "label": "Attach",
+   "reqd": 1
+  },
+  {
+   "columns": 2,
+   "fieldname": "preview",
+   "fieldtype": "Button",
+   "in_list_view": 1,
+   "label": "Preview"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2025-12-25 13:34:12.170571",
+ "modified_by": "Administrator",
+ "module": "FSM",
+ "name": "FSM Additional Attachment",
+ "owner": "Administrator",
+ "permissions": [],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

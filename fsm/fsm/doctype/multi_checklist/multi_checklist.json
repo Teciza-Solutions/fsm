@@ -1,0 +1,180 @@
+{
+ "actions": [],
+ "autoname": "naming_series:naming_series",
+ "creation": "2026-11-02 12:51:42.982576",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "asset_unit",
+  "asset_name",
+  "project",
+  "location",
+  "comments",
+  "column_break_svms",
+  "date",
+  "checklist_templates",
+  "update_checklist",
+  "technician_details_section",
+  "technician_name",
+  "technician_signature",
+  "images_section",
+  "upload_images",
+  "images",
+  "criteria_section",
+  "criterias",
+  "values",
+  "columns"
+ ],
+ "fields": [
+  {
+   "fetch_from": "asset_unit.project",
+   "fieldname": "project",
+   "fieldtype": "Link",
+   "label": "Project",
+   "options": "Project",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "asset_unit.cp23b2_location",
+   "fieldname": "location",
+   "fieldtype": "Data",
+   "label": "Location",
+   "read_only": 1
+  },
+  {
+   "fieldname": "technician_name",
+   "fieldtype": "Data",
+   "label": "Technician Name"
+  },
+  {
+   "fieldname": "technician_signature",
+   "fieldtype": "Signature",
+   "label": "Technician Signature"
+  },
+  {
+   "fieldname": "column_break_svms",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "comments",
+   "fieldtype": "Small Text",
+   "label": "Comments"
+  },
+  {
+   "fieldname": "criteria_section",
+   "fieldtype": "Section Break",
+   "hidden": 1,
+   "label": "Criteria"
+  },
+  {
+   "fieldname": "criterias",
+   "fieldtype": "Table",
+   "label": "Criteria",
+   "options": "Maintenance Checklist Item"
+  },
+  {
+   "fieldname": "values",
+   "fieldtype": "Table",
+   "label": "Values",
+   "options": "Maintenance Checklist Item Value"
+  },
+  {
+   "fieldname": "columns",
+   "fieldtype": "Table",
+   "label": "Columns",
+   "options": "Maintenance Checklist Template Item Column"
+  },
+  {
+   "default": "ML-CHK-.####",
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "hidden": 1,
+   "label": "Naming Series",
+   "options": "ML-CHK-.####"
+  },
+  {
+   "fieldname": "asset_unit",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Asset Unit",
+   "options": "Asset Unit",
+   "reqd": 1
+  },
+  {
+   "fieldname": "checklist_templates",
+   "fieldtype": "Table",
+   "label": "Checklist Templates",
+   "options": "Asset Unit Checklist Template",
+   "read_only": 1
+  },
+  {
+   "default": "Today",
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "label": "Posting Date",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "asset_unit.asset_name",
+   "fieldname": "asset_name",
+   "fieldtype": "Data",
+   "label": "Asset Name",
+   "read_only": 1
+  },
+  {
+   "fieldname": "images_section",
+   "fieldtype": "Section Break",
+   "label": "Images"
+  },
+  {
+   "fieldname": "images",
+   "fieldtype": "Table",
+   "options": "Multi Checklist Image"
+  },
+  {
+   "fieldname": "upload_images",
+   "fieldtype": "Button",
+   "label": "Upload Images"
+  },
+  {
+   "fieldname": "update_checklist",
+   "fieldtype": "Button",
+   "label": "Update Checklist"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "technician_details_section",
+   "fieldtype": "Section Break",
+   "label": "Technician Details"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2026-11-02 14:19:09.393379",
+ "modified_by": "Administrator",
+ "module": "FSM",
+ "name": "Multi Checklist",
+ "naming_rule": "By \"Naming Series\" field",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

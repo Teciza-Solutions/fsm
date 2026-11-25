@@ -168,6 +168,8 @@ frappe.ui.form.on("Preventive Maintenance", {
 		if (frm.doc.is_rf003_pm) {
 			print_format = "PM Final Report for RF003";
 		}
+		const params = new URLSearchParams({ docname: frm.doc.name, print_format });
+		const download_url = `/api/method/fsm.maintenance_reports.download_pm_final_report?${params}`;
 
 		// there maybe multiple chechlists so set the selected checklist in pm and generate report
 		if (["2021-CSS-205", "2021-CSS-074", "2025-CSS-105"].includes(frm.doc.project)) {
@@ -188,9 +190,7 @@ frappe.ui.form.on("Preventive Maintenance", {
 							.then(() => frm.save_or_update())
 							.then(() => {
 								setTimeout(() => {
-									window.open(
-										`/api/method/traffictech.utils.download_pm_final_report?doctype=${frm.doc.doctype}&docname=${frm.doc.name}&print_format=${print_format}`
-									);
+								window.open(download_url);
 								}, 1000);
 							});
 
@@ -221,9 +221,7 @@ frappe.ui.form.on("Preventive Maintenance", {
 									.then(() => frm.save_or_update())
 									.then(() => {
 										setTimeout(() => {
-											window.open(
-												`/api/method/traffictech.utils.download_pm_final_report?doctype=${frm.doc.doctype}&docname=${frm.doc.name}&print_format=${print_format}`
-											);
+											window.open(download_url);
 										}, 1000);
 										d.hide();
 									});
@@ -239,9 +237,7 @@ frappe.ui.form.on("Preventive Maintenance", {
 			});
 
 		} else {
-			window.open(
-				`/api/method/traffictech.utils.download_pm_final_report?doctype=${frm.doc.doctype}&docname=${frm.doc.name}&print_format=${print_format}`
-			);
+			window.open(download_url);
 
 		}
 	},
@@ -259,8 +255,7 @@ frappe.ui.form.on("Preventive Maintenance", {
 		if (!frm.doc.asset_unit || frm.doc.checklist_created) {
 			return;
 		}
-		// Fetch the template from TTG Settings
-		const template = await frappe.db.get_single_value("TTG Settings", "rf003_default_action_taken_template");
+		const template = await frappe.xcall("fsm.fsm.doctype.fsm_settings.fsm_settings.get_rf003_default_action_taken_template");
 		if (!template) {
 			return;
 		}

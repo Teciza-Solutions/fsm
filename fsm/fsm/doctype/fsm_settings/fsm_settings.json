@@ -1,0 +1,24 @@
+{
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "rf003_default_action_taken_template"
+ ],
+ "fields": [
+  {
+   "fieldname": "rf003_default_action_taken_template",
+   "fieldtype": "Small Text",
+   "label": "RF003 Default Action Taken Template"
+  }
+ ],
+ "issingle": 1,
+ "module": "FSM",
+ "name": "FSM Settings",
+ "permissions": [
+  {
+   "read": 1,
+   "role": "System Manager",
+   "write": 1
+  }
+ ]
+}

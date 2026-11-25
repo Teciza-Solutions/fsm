@@ -66,7 +66,9 @@ class AssetUnit(Document):
 		new_checklist = frappe.new_doc("Multi Checklist")
 		new_checklist.asset_unit = self.name
 		new_checklist.asset_name = self.asset_name
-		new_checklist.project = self.project or "2021-CSS-205"
+		new_checklist.project = self.project
+		if not new_checklist.project and frappe.db.exists("Project", "2021-CSS-205"):
+			new_checklist.project = "2021-CSS-205"
 		new_checklist.location = getattr(self, "cp23b2_location", None) or getattr(self, "location_description", None)
 		new_checklist.date = frappe.utils.today()
 
@@ -120,14 +122,13 @@ class AssetUnit(Document):
 							"parent1": desc.get("parent1"),
 							"main_parent": desc.get("main_parent"),
 							"has_comments": desc.get("has_comments", 0),
-							"value": self.get_checklist_default_value(column.get("column_name"), desc),
+						"value": self.get_checklist_default_value(column.get("column_name"), desc, new_checklist.project),
 							"checklist_template": template,
 						})
 
 		return new_checklist.as_dict()
 
-	def get_checklist_default_value(self, column_name, desc):
-		project = self.project or "2021-CSS-205"
+	def get_checklist_default_value(self, column_name, desc, project):
 		if project != "2021-CSS-205" or not desc.get("parent1") or desc.get("has_comments"):
 			return None
 

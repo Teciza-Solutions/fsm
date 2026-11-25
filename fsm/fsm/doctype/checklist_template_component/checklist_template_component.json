@@ -1,0 +1,48 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2025-11-08 15:59:55.368766",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "component",
+  "update",
+  "duplicate"
+ ],
+ "fields": [
+  {
+   "fieldname": "component",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Component",
+   "reqd": 1
+  },
+  {
+   "fieldname": "update",
+   "fieldtype": "Button",
+   "in_list_view": 1,
+   "label": "Update"
+  },
+  {
+   "fieldname": "duplicate",
+   "fieldtype": "Button",
+   "in_list_view": 1,
+   "label": "Duplicate"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2025-11-23 15:18:44.954089",
+ "modified_by": "Administrator",
+ "module": "FSM",
+ "name": "Checklist Template Component",
+ "owner": "Administrator",
+ "permissions": [],
+ "row_format": "Dynamic",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

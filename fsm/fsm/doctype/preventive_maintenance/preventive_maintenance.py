@@ -16,8 +16,9 @@ from frappe.utils.file_manager import get_file_path
 import json
 from frappe.utils.xlsxutils import make_xlsx
 from frappe.utils.file_manager import save_file
-from traffictech.traffictech.doctype.inspection_improvement_request.inspection_improvement_request import reassign_tasks_bulkly
 import re
+
+from fsm.api.task_assignments import reassign_tasks
 
 
 class PreventiveMaintenance(Document):
@@ -252,7 +253,7 @@ class PreventiveMaintenance(Document):
 		self.save()
 
 		# after updating the asset unit, assign the todo and notify
-		reassign_tasks_bulkly([self.schedule_cabinet], delete_todo=True, type_="pm")
+		reassign_tasks("Schedule Cabinet", self.schedule_cabinet, "schedule_cabinet")
 
 		return True
 

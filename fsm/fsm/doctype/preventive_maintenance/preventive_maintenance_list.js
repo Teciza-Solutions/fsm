@@ -55,7 +55,7 @@ frappe.listview_settings['Preventive Maintenance'] = {
 			}
 
 			let pm_names = JSON.stringify(selected_pm.map(row => row.name));
-			let url = `/api/method/traffictech.utils.download_maintenance_files?doctype=Preventive Maintenance&names=${encodeURIComponent(pm_names)}`;
+			let url = `/api/method/fsm.maintenance_reports.download_maintenance_files?names=${encodeURIComponent(pm_names)}`;
 			window.open(url);
 
 
