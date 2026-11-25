@@ -1,0 +1,64 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2025-09-17 12:00:22.204147",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "task",
+  "completed",
+  "not_completed",
+  "na",
+  "remarks"
+ ],
+ "fields": [
+  {
+   "fieldname": "task",
+   "fieldtype": "Small Text",
+   "in_list_view": 1,
+   "label": "Task",
+   "reqd": 1
+  },
+  {
+   "allow_on_submit": 1,
+   "default": "0",
+   "fieldname": "completed",
+   "fieldtype": "Check",
+   "label": "Completed"
+  },
+  {
+   "allow_on_submit": 1,
+   "default": "0",
+   "fieldname": "not_completed",
+   "fieldtype": "Check",
+   "label": "Not Completed"
+  },
+  {
+   "allow_on_submit": 1,
+   "default": "0",
+   "fieldname": "na",
+   "fieldtype": "Check",
+   "label": "NA"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "remarks",
+   "fieldtype": "Small Text",
+   "label": "Remarks"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2025-09-17 12:21:23.499053",
+ "modified_by": "Administrator",
+ "module": "FSM",
+ "name": "Schedule Cabinet Checklist",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

@@ -1,0 +1,282 @@
+{
+ "charts": [],
+ "content": "[{\"id\":\"G4iOqEo9cN\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">FSM</span>\",\"col\":12}},{\"id\":\"Ya35lrM-k5\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Asset Unit\",\"col\":3}},{\"id\":\"rn78UUHxp6\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Asset Unit Type\",\"col\":3}},{\"id\":\"2S13bze-Qi\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Asset Schedule\",\"col\":3}},{\"id\":\"2Ofxs_LP4O\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Team\",\"col\":3}},{\"id\":\"-gKk8YWiTw\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Preventive Maintenance\",\"col\":3}},{\"id\":\"rJ06lNaMfr\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Maintenance Checklist\",\"col\":3}},{\"id\":\"x2ecxli7Lo\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Task\",\"col\":3}},{\"id\":\"n37t4gwsqM\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Request for Inspection\",\"col\":3}},{\"id\":\"fxgt7XC3Je\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Inspection Improvement\",\"col\":3}},{\"id\":\"9YRp5frdwj\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Service Request\",\"col\":3}},{\"id\":\"z2vj64ar8P\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"CSS Vehicle Log\",\"col\":3}},{\"id\":\"TVUriJqqp7\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"CSS O&M Manpower\",\"col\":3}},{\"id\":\"xK7QV7R7pg\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Css Tool Log\",\"col\":3}},{\"id\":\"_X2-4_cYOO\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"ym_IVqeIqS\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Corrective Maintenance Request\",\"col\":3}},{\"id\":\"y8VPinpSXO\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Corrective Maintenance\",\"col\":3}},{\"id\":\"ds17r1hdL1\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"cXnLWwIDMu\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Defect Survey Schedule\",\"col\":3}},{\"id\":\"SmpUPCQqG3\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Defect Survey\",\"col\":3}},{\"id\":\"1edVrouGZE\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Defect Dataset\",\"col\":3}},{\"id\":\"qHjyYNMa8D\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"U4ujlTyNpM\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Total Tasks\",\"col\":4}},{\"id\":\"sPxHXj1h_C\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Open\",\"col\":4}},{\"id\":\"IX91zNZBRg\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Working\",\"col\":4}},{\"id\":\"xWlQJaRAwH\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Completed\",\"col\":4}},{\"id\":\"ZZkfplgmCO\",\"type\":\"paragraph\",\"data\":{\"text\":\"Reports\",\"col\":12}},{\"id\":\"N72ZMBb8tC\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"PM CM Task Summary\",\"col\":3}},{\"id\":\"GU4zwrsjw8\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Cm Summary Based On Shift\",\"col\":3}},{\"id\":\"w6hvZsRjKz\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"FSM Dashboard\",\"col\":3}},{\"id\":\"uG_sJYG2WO\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Task Summary\",\"col\":3}},{\"id\":\"LognBAHKMP\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Create Report\",\"col\":3}},{\"id\":\"8b9c58aksc\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Corrective Maintenance Issue Summary\",\"col\":3}},{\"id\":\"bxkoE5j17A\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"CM Summary Based on Shift\",\"col\":3}},{\"id\":\"xhQyq58kWd\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"CM Team Project Shift Summary\",\"col\":3}},{\"id\":\"5zmXo9TEPl\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"FSM Today Task Map\",\"col\":3}}]",
+ "creation": "2025-03-12 10:22:23.573871",
+ "custom_blocks": [],
+ "display_label": "",
+ "docstatus": 0,
+ "doctype": "Workspace",
+ "for_user": "",
+ "hide_custom": 0,
+ "icon": "service",
+ "indicator_color": "",
+ "is_hidden": 0,
+ "is_quick_link": 0,
+ "label": "FSM",
+ "links": [],
+ "modified": "2026-11-25 12:20:49.358567",
+ "modified_by": "Administrator",
+ "module": "FSM",
+ "name": "FSM",
+ "number_cards": [
+  {
+   "label": "Total Tasks",
+   "number_card_name": "Total Tasks"
+  },
+  {
+   "label": "Open",
+   "number_card_name": "Open Tasks"
+  },
+  {
+   "label": "Working",
+   "number_card_name": "Working Tasks"
+  },
+  {
+   "label": "Completed",
+   "number_card_name": "Completed Tasks"
+  }
+ ],
+ "owner": "Administrator",
+ "parent_page": "",
+ "public": 1,
+ "quick_link_open_new_tab": 0,
+ "quick_link_to": "",
+ "quick_link_type": "DocType",
+ "quick_link_url": "",
+ "quick_lists": [],
+ "roles": [
+  {
+   "role": "FSM Incharge"
+  },
+  {
+   "role": "FSM Manager"
+  },
+  {
+   "role": "Quality Manager"
+  },
+  {
+   "role": "CEO"
+  },
+  {
+   "role": "General Manager"
+  }
+ ],
+ "sequence_id": 38.0,
+ "shortcuts": [
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Corrective Maintenance Issue Summary",
+   "link_to": "CM Issue Summary",
+   "report_ref_doctype": "Corrective Maintenance",
+   "type": "Report"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "FSM Dashboard",
+   "link_to": "fsm-dashboard",
+   "type": "Page"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "FSM Today Task Map",
+   "type": "URL",
+   "url": "/app/task/view/map?posting_date=%5B%22Timespan%22%2C%22today%22%5D"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Task",
+   "link_to": "Task",
+   "stats_filter": "[]",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "CM Team Project Shift Summary",
+   "link_to": "CM Team Project Shift Summary",
+   "report_ref_doctype": "Corrective Maintenance",
+   "type": "Report"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "New",
+   "label": "Create Report",
+   "link_to": "FSM Report",
+   "stats_filter": "[]",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "PM CM Task Summary",
+   "link_to": "pm-cm-task-summary",
+   "type": "Page"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Request for Inspection",
+   "link_to": "Inspection Improvement Request",
+   "stats_filter": "[]",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Css Tool Log",
+   "link_to": "CSS Tool Log",
+   "stats_filter": "[]",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "CSS O&M Manpower",
+   "link_to": "CSS Manpower",
+   "stats_filter": "[]",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Service Request",
+   "link_to": "Service Request",
+   "stats_filter": "[]",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Defect Survey Schedule",
+   "link_to": "Defect Survey Schedule",
+   "stats_filter": "[]",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Corrective Maintenance",
+   "link_to": "Corrective Maintenance",
+   "stats_filter": "[]",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Inspection Improvement",
+   "link_to": "Inspection Improvement",
+   "stats_filter": "[]",
+   "type": "DocType"
+  },
+  {
+   "color": "Green",
+   "doc_view": "List",
+   "label": "Asset Schedule",
+   "link_to": "Schedule Cabinet",
+   "stats_filter": "[]",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Cm Summary Based On Shift",
+   "link_to": "CM Summary Based on Shift",
+   "report_ref_doctype": "Corrective Maintenance",
+   "type": "Report"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Task Summary",
+   "link_to": "FSM Task Summary",
+   "report_ref_doctype": "Task",
+   "type": "Report"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "CM Summary Based on Shift",
+   "link_to": "CM Summary Based on Shift",
+   "report_ref_doctype": "Corrective Maintenance",
+   "type": "Report"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "CSS Vehicle Log",
+   "link_to": "CSS Vehicle Log",
+   "stats_filter": "[]",
+   "type": "DocType"
+  },
+  {
+   "color": "Orange",
+   "doc_view": "List",
+   "label": "Team",
+   "link_to": "Team",
+   "stats_filter": "[]",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Preventive Maintenance",
+   "link_to": "Preventive Maintenance",
+   "stats_filter": "[]",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Maintenance Checklist",
+   "link_to": "Maintenance Checklist",
+   "stats_filter": "[]",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Asset Unit",
+   "link_to": "Asset Unit",
+   "stats_filter": "[]",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Defect Survey",
+   "link_to": "Defect Survey",
+   "stats_filter": "[]",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Corrective Maintenance Request",
+   "link_to": "Corrective Maintenance Request",
+   "stats_filter": "[]",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Asset Unit Type",
+   "link_to": "Asset Unit Type",
+   "stats_filter": "[]",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Defect Dataset",
+   "link_to": "Defect Dataset",
+   "stats_filter": "[]",
+   "type": "DocType"
+  }
+ ],
+ "show_total_count": 0,
+ "title": "FSM"
+}

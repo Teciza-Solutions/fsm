@@ -1,0 +1,708 @@
+{
+ "actions": [],
+ "allow_import": 1,
+ "allow_rename": 1,
+ "autoname": "field:id",
+ "creation": "2026-10-25 11:10:10.862322",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "asset_type",
+  "asset_name",
+  "project",
+  "structure",
+  "ip_address",
+  "warranty_date",
+  "manufacturer",
+  "tdp",
+  "is_cp23b2",
+  "column_break_ahx9",
+  "id",
+  "asset_id",
+  "asset_code",
+  "asset_tag",
+  "junction_no",
+  "mx_location",
+  "pbc_location",
+  "location_description",
+  "mxassetnum",
+  "logic_id",
+  "location_id",
+  "serial_no",
+  "image",
+  "cp23b2_section",
+  "cp23b2",
+  "cp23b2_parent",
+  "cp23b2_location",
+  "model",
+  "ar_seq",
+  "parent_asset_seq",
+  "parent_asset_code",
+  "parent_asset_description",
+  "asset_parent",
+  "district",
+  "building",
+  "bg_code",
+  "bg_seq",
+  "lo_seq",
+  "floor",
+  "cp23b2_column_break_11",
+  "building_floor_id",
+  "room_number",
+  "ar_group",
+  "product_code",
+  "serial_number",
+  "qty",
+  "ar_drawing",
+  "lifespan",
+  "contractor",
+  "ar_comments",
+  "sup_seq",
+  "cp23b2_column_break_22",
+  "system",
+  "sys_seq",
+  "tag",
+  "tag_seq",
+  "barcode",
+  "cost_centre",
+  "asset_status",
+  "section_break_rkvw",
+  "asset_number",
+  "cabinet_type",
+  "connectivity_type",
+  "column_break_i0sh",
+  "feeder_pillar_number",
+  "kahramaa_meter_number",
+  "location_name",
+  "credential_section",
+  "username",
+  "column_break_nw6s",
+  "password",
+  "section_break_ofmu",
+  "templates",
+  "column_break_hfow",
+  "survey_checklist",
+  "cordinates_section",
+  "x_coordinate",
+  "y_coordinate",
+  "column_break_kstg",
+  "longitude",
+  "latitude",
+  "section_break_3dp2",
+  "location"
+ ],
+ "fields": [
+  {
+   "fieldname": "id",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "ID",
+   "unique": 1
+  },
+  {
+   "fieldname": "column_break_ahx9",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "image",
+   "fieldtype": "Attach Image",
+   "label": "Image"
+  },
+  {
+   "fieldname": "cordinates_section",
+   "fieldtype": "Section Break",
+   "label": "Coordinates"
+  },
+  {
+   "fieldname": "column_break_kstg",
+   "fieldtype": "Column Break"
+  },
+  {
+   "depends_on": "eval: doc.asset_type == \"Cabinet\";",
+   "fieldname": "junction_no",
+   "fieldtype": "Data",
+   "label": "Junction No"
+  },
+  {
+   "fieldname": "section_break_3dp2",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "location",
+   "fieldtype": "HTML",
+   "label": "Location"
+  },
+  {
+   "fieldname": "asset_type",
+   "fieldtype": "Link",
+   "label": "Asset Type",
+   "options": "Asset Unit Type",
+   "reqd": 1
+  },
+  {
+   "fieldname": "section_break_ofmu",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "asset_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Asset Name",
+   "mandatory_depends_on": "eval: doc.asset_type != \"Junction\";"
+  },
+  {
+   "fieldname": "project",
+   "fieldtype": "Link",
+   "label": "Project",
+   "mandatory_depends_on": "eval: doc.asset_type != \"Junction\";",
+   "options": "Project"
+  },
+  {
+   "fieldname": "latitude",
+   "fieldtype": "Data",
+   "label": "Latitude",
+   "read_only": 1
+  },
+  {
+   "fieldname": "longitude",
+   "fieldtype": "Data",
+   "label": "Longitude",
+   "read_only": 1
+  },
+  {
+   "fieldname": "x_coordinate",
+   "fieldtype": "Data",
+   "label": "X"
+  },
+  {
+   "fieldname": "y_coordinate",
+   "fieldtype": "Data",
+   "label": "Y"
+  },
+  {
+   "fieldname": "templates",
+   "fieldtype": "Table",
+   "label": "Checklist Templates",
+   "options": "Asset Unit Checklist Template"
+  },
+  {
+   "fieldname": "column_break_hfow",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "asset_id",
+   "fieldtype": "Data",
+   "label": "Asset ID"
+  },
+  {
+   "fieldname": "asset_tag",
+   "fieldtype": "Data",
+   "label": "Asset Tag"
+  },
+  {
+   "fieldname": "structure",
+   "fieldtype": "Data",
+   "label": "Structure"
+  },
+  {
+   "depends_on": "eval: doc.asset_type == \"Camera\";",
+   "fieldname": "ip_address",
+   "fieldtype": "Data",
+   "label": "IP Address"
+  },
+  {
+   "depends_on": "eval: doc.asset_type == \"Camera\" || doc.is_cp23b2;",
+   "fieldname": "warranty_date",
+   "fieldtype": "Date",
+   "label": "Warranty Date"
+  },
+  {
+   "depends_on": "eval: doc.asset_type == \"Camera\" || doc.is_cp23b2;",
+   "fieldname": "manufacturer",
+   "fieldtype": "Link",
+   "label": "Manufacturer",
+   "options": "Manufacturer"
+  },
+  {
+   "fieldname": "credential_section",
+   "fieldtype": "Section Break",
+   "label": "Credential"
+  },
+  {
+   "fieldname": "username",
+   "fieldtype": "Data",
+   "label": "Username"
+  },
+  {
+   "fieldname": "column_break_nw6s",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "password",
+   "fieldtype": "Data",
+   "label": "Password"
+  },
+  {
+   "fieldname": "location_id",
+   "fieldtype": "Data",
+   "label": "Location ID"
+  },
+  {
+   "depends_on": "eval: doc.asset_type == \"Camera\";",
+   "fieldname": "serial_no",
+   "fieldtype": "Data",
+   "label": "Serial No"
+  },
+  {
+   "fieldname": "survey_checklist",
+   "fieldtype": "Table",
+   "label": "Survey Checklist",
+   "options": "Checklist Template"
+  },
+  {
+   "fieldname": "section_break_rkvw",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "asset_number",
+   "fieldtype": "Data",
+   "label": "Asset Number"
+  },
+  {
+   "fieldname": "cabinet_type",
+   "fieldtype": "Select",
+   "label": "Cabinet Type",
+   "options": "\nPole Mounted\nGround Mounted\nTop Hat\nSingle Dore\nDouble Door"
+  },
+  {
+   "fieldname": "connectivity_type",
+   "fieldtype": "Select",
+   "label": "Connectivity Type",
+   "options": "\nWireless\nMPLS\nFiber\n4G LTE"
+  },
+  {
+   "fieldname": "column_break_i0sh",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "feeder_pillar_number",
+   "fieldtype": "Data",
+   "label": "Feeder Pillar Number"
+  },
+  {
+   "fieldname": "kahramaa_meter_number",
+   "fieldtype": "Data",
+   "label": "Kahramaa Meter Number"
+  },
+  {
+   "fieldname": "location_name",
+   "fieldtype": "Data",
+   "label": "Location Name"
+  },
+  {
+   "fieldname": "tdp",
+   "fieldtype": "Data",
+   "label": "TDP"
+  },
+  {
+   "fieldname": "mxassetnum",
+   "fieldtype": "Data",
+   "label": "MXASSETNUM"
+  },
+  {
+   "fieldname": "logic_id",
+   "fieldtype": "Data",
+   "label": "Logic ID"
+  },
+  {
+   "fieldname": "asset_code",
+   "fieldtype": "Data",
+   "in_standard_filter": 1,
+   "label": "Asset Code"
+  },
+  {
+   "depends_on": "eval: doc.asset_type == \"Junction\";",
+   "fieldname": "mx_location",
+   "fieldtype": "Data",
+   "label": "Mx Location"
+  },
+  {
+   "depends_on": "eval: doc.asset_type == \"Junction\";",
+   "fieldname": "pbc_location",
+   "fieldtype": "Data",
+   "label": "PBC Location"
+  },
+  {
+   "depends_on": "eval: doc.asset_type == \"Junction\";",
+   "fieldname": "location_description",
+   "fieldtype": "Data",
+   "label": "Location"
+  },
+  {
+   "depends_on": "eval:doc.is_cp23b2",
+   "fieldname": "cp23b2_section",
+   "fieldtype": "Section Break",
+   "label": "CP23B2"
+  },
+  {
+   "default": "0",
+   "fieldname": "is_cp23b2",
+   "fieldtype": "Check",
+   "label": "is CP23B2?"
+  },
+  {
+   "depends_on": "eval:doc.is_cp23b2",
+   "fieldname": "cp23b2",
+   "fieldtype": "Select",
+   "label": "CP23B2",
+   "options": "\nParent\nChild"
+  },
+  {
+   "depends_on": "eval:doc.is_cp23b2 && doc.cp23b2==\"Child\"",
+   "fieldname": "cp23b2_parent",
+   "fieldtype": "Link",
+   "label": "Parent Asset",
+   "link_filters": "[[\"Asset Unit\",\"cp23b2\",\"=\",\"Parent\"]]",
+   "mandatory_depends_on": "eval:doc.is_cp23b2 && doc.cp23b2==\"Child\"",
+   "options": "Asset Unit"
+  },
+  {
+   "depends_on": "eval:doc.is_cp23b2",
+   "fieldname": "cp23b2_location",
+   "fieldtype": "Data",
+   "label": "Location"
+  },
+  {
+   "depends_on": "eval:doc.is_cp23b2",
+   "fieldname": "model",
+   "fieldtype": "Data",
+   "label": "Model"
+  },
+  {
+   "depends_on": "eval:doc.is_cp23b2",
+   "fieldname": "ar_seq",
+   "fieldtype": "Data",
+   "label": "AR SEQ"
+  },
+  {
+   "depends_on": "eval:doc.is_cp23b2",
+   "fetch_from": "cp23b2_parent.ar_seq",
+   "fieldname": "parent_asset_seq",
+   "fieldtype": "Data",
+   "label": "Parent Asset SEQ",
+   "read_only": 1
+  },
+  {
+   "depends_on": "eval:doc.is_cp23b2",
+   "fetch_from": "cp23b2_parent.asset_code",
+   "fieldname": "parent_asset_code",
+   "fieldtype": "Data",
+   "label": "Parent Asset Code",
+   "read_only": 1
+  },
+  {
+   "depends_on": "eval:doc.is_cp23b2",
+   "fetch_from": "cp23b2_parent.description",
+   "fieldname": "parent_asset_description",
+   "fieldtype": "Small Text",
+   "label": "Parent Asset Description",
+   "read_only": 1
+  },
+  {
+   "depends_on": "eval:doc.is_cp23b2",
+   "fieldname": "asset_parent",
+   "fieldtype": "Data",
+   "label": "Asset Parent"
+  },
+  {
+   "depends_on": "eval:doc.is_cp23b2",
+   "fieldname": "district",
+   "fieldtype": "Data",
+   "label": "District"
+  },
+  {
+   "depends_on": "eval:doc.is_cp23b2",
+   "fieldname": "building",
+   "fieldtype": "Data",
+   "label": "Building"
+  },
+  {
+   "depends_on": "eval:doc.is_cp23b2",
+   "fieldname": "bg_code",
+   "fieldtype": "Data",
+   "label": "BG Code"
+  },
+  {
+   "depends_on": "eval:doc.is_cp23b2",
+   "fieldname": "bg_seq",
+   "fieldtype": "Data",
+   "label": "BG SEQ"
+  },
+  {
+   "depends_on": "eval:doc.is_cp23b2",
+   "fieldname": "lo_seq",
+   "fieldtype": "Data",
+   "label": "LO SEQ"
+  },
+  {
+   "depends_on": "eval:doc.is_cp23b2",
+   "fieldname": "floor",
+   "fieldtype": "Data",
+   "label": "Floor"
+  },
+  {
+   "depends_on": "eval:doc.is_cp23b2",
+   "fieldname": "cp23b2_column_break_11",
+   "fieldtype": "Column Break"
+  },
+  {
+   "depends_on": "eval:doc.is_cp23b2",
+   "fieldname": "building_floor_id",
+   "fieldtype": "Data",
+   "label": "Building Floor Id"
+  },
+  {
+   "depends_on": "eval:doc.is_cp23b2",
+   "fieldname": "room_number",
+   "fieldtype": "Data",
+   "label": "Room Number"
+  },
+  {
+   "depends_on": "eval:doc.is_cp23b2",
+   "fieldname": "ar_group",
+   "fieldtype": "Data",
+   "label": "AR Group"
+  },
+  {
+   "depends_on": "eval:doc.is_cp23b2",
+   "fieldname": "product_code",
+   "fieldtype": "Data",
+   "label": "Product Code"
+  },
+  {
+   "depends_on": "eval:doc.is_cp23b2",
+   "fieldname": "serial_number",
+   "fieldtype": "Data",
+   "label": "Serial Number"
+  },
+  {
+   "depends_on": "eval:doc.is_cp23b2",
+   "fieldname": "qty",
+   "fieldtype": "Int",
+   "label": "Qty"
+  },
+  {
+   "depends_on": "eval:doc.is_cp23b2",
+   "fieldname": "ar_drawing",
+   "fieldtype": "Data",
+   "label": "AR Drawing"
+  },
+  {
+   "depends_on": "eval:doc.is_cp23b2",
+   "fieldname": "lifespan",
+   "fieldtype": "Data",
+   "label": "Lifespan"
+  },
+  {
+   "depends_on": "eval:doc.is_cp23b2",
+   "fieldname": "contractor",
+   "fieldtype": "Data",
+   "label": "Contractor"
+  },
+  {
+   "depends_on": "eval:doc.is_cp23b2",
+   "fieldname": "ar_comments",
+   "fieldtype": "Small Text",
+   "label": "AR Comments"
+  },
+  {
+   "depends_on": "eval:doc.is_cp23b2",
+   "fieldname": "sup_seq",
+   "fieldtype": "Data",
+   "label": "SUP SEQ"
+  },
+  {
+   "depends_on": "eval:doc.is_cp23b2",
+   "fieldname": "cp23b2_column_break_22",
+   "fieldtype": "Column Break"
+  },
+  {
+   "depends_on": "eval:doc.is_cp23b2",
+   "fieldname": "system",
+   "fieldtype": "Data",
+   "label": "System"
+  },
+  {
+   "depends_on": "eval:doc.is_cp23b2",
+   "fieldname": "sys_seq",
+   "fieldtype": "Data",
+   "label": "SYS SEQ"
+  },
+  {
+   "depends_on": "eval:doc.is_cp23b2",
+   "fieldname": "tag",
+   "fieldtype": "Data",
+   "label": "Tag"
+  },
+  {
+   "depends_on": "eval:doc.is_cp23b2",
+   "fieldname": "tag_seq",
+   "fieldtype": "Data",
+   "label": "TAG SEQ"
+  },
+  {
+   "depends_on": "eval:doc.is_cp23b2",
+   "fieldname": "barcode",
+   "fieldtype": "Data",
+   "label": "Barcode"
+  },
+  {
+   "depends_on": "eval:doc.is_cp23b2",
+   "fieldname": "cost_centre",
+   "fieldtype": "Data",
+   "label": "Cost Centre"
+  },
+  {
+   "depends_on": "eval:doc.is_cp23b2",
+   "fieldname": "asset_status",
+   "fieldtype": "Select",
+   "label": "Asset Status",
+   "options": "\nActive\nInactive"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [
+  {
+   "group": "Maintenance",
+   "link_doctype": "Preventive Maintenance",
+   "link_fieldname": "asset_unit"
+  },
+  {
+   "group": "Maintenance",
+   "link_doctype": "Corrective Maintenance",
+   "link_fieldname": "asset_unit"
+  },
+  {
+   "group": "Maintenance",
+   "is_child_table": 1,
+   "link_doctype": "Schedule Cabinet Item",
+   "link_fieldname": "asset_unit",
+   "parent_doctype": "Corrective Maintenance Request",
+   "table_fieldname": "units"
+  },
+  {
+   "group": "Inspection",
+   "is_child_table": 1,
+   "link_doctype": "Inspection Request Asset Unit",
+   "link_fieldname": "asset_unit",
+   "parent_doctype": "Inspection Improvement Request",
+   "table_fieldname": "units"
+  },
+  {
+   "group": "Inspection",
+   "link_doctype": "Inspection Improvement",
+   "link_fieldname": "asset_unit"
+  },
+  {
+   "group": "Checklist",
+   "link_doctype": "Multi Checklist",
+   "link_fieldname": "asset_unit"
+  },
+  {
+   "group": "Checklist",
+   "link_doctype": "Asset Survey Checklist",
+   "link_fieldname": "asset_unit"
+  },
+  {
+   "group": "Checklist",
+   "link_doctype": "RF003 Checklist",
+   "link_fieldname": "asset_unit"
+  },
+  {
+   "group": "Checklist",
+   "link_doctype": "ROM Department Form",
+   "link_fieldname": "junction_no"
+  },
+  {
+   "group": "Survey",
+   "link_doctype": "Asset Survey",
+   "link_fieldname": "asset_unit"
+  },
+  {
+   "group": "Survey",
+   "link_doctype": "Defect Survey",
+   "link_fieldname": "asset_unit"
+  },
+  {
+   "group": "Schedule",
+   "is_child_table": 1,
+   "link_doctype": "Schedule Cabinet Item",
+   "link_fieldname": "asset_unit",
+   "parent_doctype": "Schedule Cabinet",
+   "table_fieldname": "asset_units"
+  },
+  {
+   "group": "Schedule",
+   "is_child_table": 1,
+   "link_doctype": "Schedule Survey Item",
+   "link_fieldname": "asset_unit",
+   "parent_doctype": "Schedule Survey",
+   "table_fieldname": "asset_units"
+  },
+  {
+   "group": "Schedule",
+   "is_child_table": 1,
+   "link_doctype": "Survey Schedule Item",
+   "link_fieldname": "asset_unit",
+   "parent_doctype": "Defect Survey Schedule",
+   "table_fieldname": "junctions"
+  },
+  {
+   "group": "Report",
+   "link_doctype": "PM Report",
+   "link_fieldname": "asset_unit"
+  },
+  {
+   "group": "Report",
+   "link_doctype": "CM Report",
+   "link_fieldname": "asset_unit"
+  },
+  {
+   "group": "Report",
+   "link_doctype": "PM Junction Report",
+   "link_fieldname": "asset_unit"
+  },
+  {
+   "group": "Activity",
+   "link_doctype": "Task",
+   "link_fieldname": "asset_unit"
+  }
+ ],
+ "modified": "2026-10-25 15:33:06.145038",
+ "modified_by": "Administrator",
+ "module": "FSM",
+ "name": "Asset Unit",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "import": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "search_fields": "asset_name,asset_id,junction_no",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

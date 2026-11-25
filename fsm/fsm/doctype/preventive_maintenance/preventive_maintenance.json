@@ -1,0 +1,575 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:PM-{schedule_cabinet}-{####}",
+ "creation": "2025-03-12 13:27:33.389844",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "main_section",
+  "schedule_cabinet",
+  "asset_unit_type",
+  "asset_unit",
+  "asset_name",
+  "asset_id",
+  "mxassetnum",
+  "junction_no",
+  "project",
+  "team",
+  "checklist_type",
+  "is_rf003_pm",
+  "column_break_y3ds",
+  "date",
+  "status",
+  "month",
+  "service_request",
+  "ttg_personnel",
+  "maintenance_checklist",
+  "location_status",
+  "replacement",
+  "multiple_assets",
+  "checklist_created",
+  "action_taken",
+  "time_log_section",
+  "start_time",
+  "end_time",
+  "column_break_msyq",
+  "completed_date",
+  "total_time_taken",
+  "location_section",
+  "latitude",
+  "longitude",
+  "actual_asset_location",
+  "column_break_kikx",
+  "current_latitude",
+  "current_longitude",
+  "current_location",
+  "section_break_eebs",
+  "team_members",
+  "add_images_section",
+  "before_button",
+  "column_break_ngzm",
+  "during_button",
+  "column_break_lfl0",
+  "after_button",
+  "column_break_ufcg",
+  "additional_button",
+  "section_break_metv",
+  "before",
+  "section_break_lx1c",
+  "during",
+  "section_break_wm9w",
+  "after",
+  "description_section",
+  "remarks",
+  "description",
+  "images_section",
+  "upload_images",
+  "images",
+  "section_break_uirg",
+  "additional_image",
+  "section_break_fdqb",
+  "fsm_additional_attachment",
+  "section_break_jflf",
+  "comments",
+  "signature_section",
+  "manager_name",
+  "manager_signature",
+  "section_break_o1ga",
+  "tasks",
+  "section_break_t9fz",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Preventive Maintenance",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "schedule_cabinet",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Schedule Asset",
+   "options": "Schedule Cabinet",
+   "read_only": 1
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "team",
+   "fieldtype": "Link",
+   "in_standard_filter": 1,
+   "label": "Team",
+   "options": "Team"
+  },
+  {
+   "fieldname": "column_break_y3ds",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_preview": 1,
+   "in_standard_filter": 1,
+   "label": "Status",
+   "options": "Pending\nWorking\nCompleted\nIn Review\nPaused\nApproved\nCancelled",
+   "reqd": 1
+  },
+  {
+   "depends_on": "!eval: !doc.multiple_assets;",
+   "fieldname": "section_break_metv",
+   "fieldtype": "Section Break"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "before",
+   "fieldtype": "Table",
+   "label": "Before",
+   "options": "Preventive Maintenance Before"
+  },
+  {
+   "depends_on": "eval: !doc.multiple_assets;",
+   "fieldname": "section_break_lx1c",
+   "fieldtype": "Section Break"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "during",
+   "fieldtype": "Table",
+   "label": "During",
+   "options": "Preventive Maintenance During"
+  },
+  {
+   "depends_on": "!multeval: !doc.multiple_assets;iple_assets",
+   "fieldname": "section_break_wm9w",
+   "fieldtype": "Section Break"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "after",
+   "fieldtype": "Table",
+   "label": "After",
+   "options": "Preventive Maintenance After"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "section_break_o1ga",
+   "fieldtype": "Section Break",
+   "label": "Tasks"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "section_break_eebs",
+   "fieldtype": "Section Break",
+   "label": "Team Members"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "team_members",
+   "fieldtype": "Table",
+   "options": "Team Member"
+  },
+  {
+   "fieldname": "tasks",
+   "fieldtype": "Table",
+   "options": "Preventive Maintenance Task",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_t9fz",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "start_time",
+   "fieldtype": "Datetime",
+   "label": "Start TIme",
+   "read_only": 1
+  },
+  {
+   "fieldname": "end_time",
+   "fieldtype": "Datetime",
+   "label": "End TIme",
+   "read_only": 1
+  },
+  {
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "in_standard_filter": 1,
+   "label": "Date"
+  },
+  {
+   "fieldname": "total_time_taken",
+   "fieldtype": "Float",
+   "label": "Total Time Taken (In Mins)",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "asset_unit.project",
+   "fieldname": "project",
+   "fieldtype": "Link",
+   "in_standard_filter": 1,
+   "label": "Project",
+   "options": "Project",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_uirg",
+   "fieldtype": "Section Break"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "additional_image",
+   "fieldtype": "Table",
+   "label": "Additional Image",
+   "options": "Preventive Maintenance Additional"
+  },
+  {
+   "fieldname": "asset_unit",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Asset Unit",
+   "options": "Asset Unit"
+  },
+  {
+   "default": "0",
+   "depends_on": "eval: !doc.is_rf003_pm;",
+   "fieldname": "replacement",
+   "fieldtype": "Check",
+   "label": "Replacement",
+   "read_only": 1
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "signature_section",
+   "fieldtype": "Section Break",
+   "hidden": 1,
+   "label": "Signature"
+  },
+  {
+   "fieldname": "manager_signature",
+   "fieldtype": "Signature",
+   "label": "Manager Signature"
+  },
+  {
+   "fieldname": "manager_name",
+   "fieldtype": "Data",
+   "label": "Manager Name",
+   "read_only": 1
+  },
+  {
+   "depends_on": "eval: !doc.multiple_assets;",
+   "fieldname": "add_images_section",
+   "fieldtype": "Section Break",
+   "label": "Add Images"
+  },
+  {
+   "fieldname": "before_button",
+   "fieldtype": "Button",
+   "label": "Before"
+  },
+  {
+   "fieldname": "column_break_ngzm",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_lfl0",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "after_button",
+   "fieldtype": "Button",
+   "label": "After"
+  },
+  {
+   "fieldname": "column_break_ufcg",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "additional_button",
+   "fieldtype": "Button",
+   "label": "Additional"
+  },
+  {
+   "fieldname": "during_button",
+   "fieldtype": "Button",
+   "label": "During"
+  },
+  {
+   "fieldname": "completed_date",
+   "fieldtype": "Date",
+   "label": "Completed Date",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_jflf",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "comments",
+   "fieldtype": "Table",
+   "label": "Comments",
+   "options": "Preventive Maintenance Comment"
+  },
+  {
+   "fetch_from": "asset_unit.asset_name",
+   "fieldname": "asset_name",
+   "fieldtype": "Data",
+   "label": "Asset Name",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "asset_unit.asset_id",
+   "fieldname": "asset_id",
+   "fieldtype": "Data",
+   "label": "Asset ID",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "asset_unit.junction_no",
+   "fieldname": "junction_no",
+   "fieldtype": "Data",
+   "label": "Junction No",
+   "read_only": 1
+  },
+  {
+   "default": "0",
+   "fetch_from": "project.multiple_assets",
+   "fieldname": "multiple_assets",
+   "fieldtype": "Check",
+   "hidden": 1,
+   "label": "Multiple Assets",
+   "read_only": 1
+  },
+  {
+   "depends_on": "multieval: doc.multiple_assets;ple_assets",
+   "fieldname": "images_section",
+   "fieldtype": "Section Break",
+   "label": "Images"
+  },
+  {
+   "fieldname": "images",
+   "fieldtype": "Table",
+   "options": "Preventive Maintenance Additional"
+  },
+  {
+   "collapsible": 1,
+   "depends_on": "eval: doc.multiple_assets;",
+   "fieldname": "description_section",
+   "fieldtype": "Section Break",
+   "label": "Remarks/Description"
+  },
+  {
+   "fieldname": "description",
+   "fieldtype": "Small Text",
+   "label": "Description"
+  },
+  {
+   "fieldname": "upload_images",
+   "fieldtype": "Button",
+   "label": "Upload Images"
+  },
+  {
+   "fieldname": "remarks",
+   "fieldtype": "Small Text",
+   "label": "Remarks"
+  },
+  {
+   "depends_on": "eval: !doc.is_rf003_pm;",
+   "fetch_from": "schedule_cabinet.service_request",
+   "fieldname": "service_request",
+   "fieldtype": "Link",
+   "label": "Service Request",
+   "options": "Service Request"
+  },
+  {
+   "fieldname": "section_break_fdqb",
+   "fieldtype": "Section Break"
+  },
+  {
+   "depends_on": "eval: !doc.is_rf003_pm;",
+   "fieldname": "fsm_additional_attachment",
+   "fieldtype": "Table",
+   "label": "FSM Additional Attachment",
+   "options": "FSM Additional Attachment"
+  },
+  {
+   "depends_on": "eval: !doc.schedule_cabinet;",
+   "fieldname": "month",
+   "fieldtype": "Select",
+   "label": "Month",
+   "options": "\nJanuary\nFebruary\nMarch\nApril\nMay\nJune\nJuly\nAugust\nSeptember\nOctober\nNovember\nDecember"
+  },
+  {
+   "depends_on": "eval: !doc.schedule_cabinet;",
+   "fieldname": "ttg_personnel",
+   "fieldtype": "Data",
+   "label": "TTG Personnel"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "maintenance_checklist",
+   "fieldtype": "Data",
+   "label": "Maintenance Checklist",
+   "read_only": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "is_rf003_pm",
+   "fieldtype": "Check",
+   "label": "Is RF003 PM?"
+  },
+  {
+   "fetch_from": "asset_unit.asset_type",
+   "fetch_if_empty": 1,
+   "fieldname": "asset_unit_type",
+   "fieldtype": "Link",
+   "label": "Asset Unit Type",
+   "options": "Asset Unit Type"
+  },
+  {
+   "fieldname": "time_log_section",
+   "fieldtype": "Section Break",
+   "label": "Time Log"
+  },
+  {
+   "fieldname": "column_break_msyq",
+   "fieldtype": "Column Break"
+  },
+  {
+   "depends_on": "is_rf003_pm",
+   "fieldname": "checklist_type",
+   "fieldtype": "Select",
+   "label": "Checklist Type",
+   "mandatory_depends_on": "is_rf003_pm",
+   "options": "\nDaily\nMonthly\nBi-Monthly\nQuarterly\nSemi-Annual\nAnnual"
+  },
+  {
+   "collapsible": 1,
+   "depends_on": "is_rf003_pm",
+   "fieldname": "location_section",
+   "fieldtype": "Section Break",
+   "label": "Location"
+  },
+  {
+   "fetch_from": "asset_unit.latitude",
+   "fieldname": "latitude",
+   "fieldtype": "Data",
+   "label": "Latitude",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "asset_unit.longitude",
+   "fieldname": "longitude",
+   "fieldtype": "Data",
+   "label": "Longitude",
+   "read_only": 1
+  },
+  {
+   "fieldname": "actual_asset_location",
+   "fieldtype": "HTML",
+   "label": "Actual Asset Location"
+  },
+  {
+   "fieldname": "column_break_kikx",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "current_latitude",
+   "fieldtype": "Data",
+   "label": "Current Latitude",
+   "read_only": 1
+  },
+  {
+   "fieldname": "current_longitude",
+   "fieldtype": "Data",
+   "label": "Current Longitude",
+   "read_only": 1
+  },
+  {
+   "fieldname": "current_location",
+   "fieldtype": "HTML",
+   "label": "Current Location"
+  },
+  {
+   "fieldname": "location_status",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Location Status"
+  },
+  {
+   "default": "0",
+   "fieldname": "checklist_created",
+   "fieldtype": "Check",
+   "hidden": 1,
+   "label": "Checklist Created",
+   "no_copy": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "action_taken",
+   "fieldtype": "Small Text",
+   "hidden": 1,
+   "label": "Action Taken"
+  },
+  {
+   "fieldname": "main_section",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fetch_from": "asset_unit.mxassetnum",
+   "fieldname": "mxassetnum",
+   "fieldtype": "Data",
+   "label": "MXASSETNUM",
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [
+  {
+   "link_doctype": "Maintenance Checklist",
+   "link_fieldname": "preventive_maintenance"
+  },
+  {
+   "link_doctype": "ROM Checklist",
+   "link_fieldname": "pm"
+  },
+  {
+   "link_doctype": "RF003 Checklist",
+   "link_fieldname": "pm"
+  }
+ ],
+ "modified": "2026-06-14 01:07:27.716762",
+ "modified_by": "Administrator",
+ "module": "FSM",
+ "name": "Preventive Maintenance",
+ "naming_rule": "Expression (old style)",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

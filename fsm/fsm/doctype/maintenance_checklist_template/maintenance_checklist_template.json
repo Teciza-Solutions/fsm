@@ -1,0 +1,98 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "field:checklist_name",
+ "creation": "2025-03-13 17:46:55.382033",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "checklist_name",
+  "column_break_amez",
+  "project",
+  "section_break_il75",
+  "activity",
+  "section_break_fkle",
+  "items",
+  "section_break_xlac",
+  "columns"
+ ],
+ "fields": [
+  {
+   "fieldname": "checklist_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Checklist Name",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "activity",
+   "fieldtype": "Table",
+   "label": "Activity",
+   "options": "Maintenance Checklist Template Activity"
+  },
+  {
+   "fieldname": "section_break_il75",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_amez",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "project",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Project",
+   "options": "Project"
+  },
+  {
+   "fieldname": "section_break_fkle",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "items",
+   "fieldtype": "Table",
+   "label": "Items",
+   "options": "Maintenance Checklist Template Item"
+  },
+  {
+   "fieldname": "section_break_xlac",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "columns",
+   "fieldtype": "Table",
+   "label": "Columns",
+   "options": "Maintenance Checklist Template Item Column"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2026-03-18 17:00:28.680291",
+ "modified_by": "Administrator",
+ "module": "FSM",
+ "name": "Maintenance Checklist Template",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
